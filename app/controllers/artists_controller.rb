@@ -13,14 +13,14 @@ class ArtistsController < ApplicationController
 	end
 
 	def create
-  @artist = Artist.new(artist_params(:name, :bio))
+  @artist = Artist.new(artist_params.require(:artist).permit(:name, :bio)) #set artist name to "not disabled".
   @artist.save
   redirect_to artist_path(@artist)
 end
 
 def update
   @artist = Artist.find(params[:id])
-  @artist.update(artist_params(:title, :room_number))
+  @artist.update(artist_params.require(:artist).permit(:name))
   redirect_to artist_path(@artist)
 end
 
