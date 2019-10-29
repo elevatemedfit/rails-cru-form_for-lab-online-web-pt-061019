@@ -34,6 +34,6 @@ private
 # should come after the other methods
 
 def artist_params(*args)
-  params.require(:artist_class).permit(*args)
+  params.require(:artist).permit(*args)
 end
 end
