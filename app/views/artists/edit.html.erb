@@ -1,10 +1,10 @@
-<h3>School Class Form</h3>
+<h3>Artist Info</h3>
 
-<%= form_for(@school_class) do |f| %>
-  <label>Course Name:</label><br>
-  <%= f.text_field :title %><br>
+<%= form_for(@artist) do |f| %>
+  <label>Name:</label><br>
+  <%= f.text_field :name %><br>
 
-  <label>Room Number:</label><br>
-  <%= f.text_field :room_number %><br>
+  <label>Bio:</label><br>
+  <%= f.text_field :bio %><br>
   <%= f.submit %>
 <% end %>
